@@ -9,7 +9,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6aa65de-5aaf-4d7f-bf83-298afed59137" name="Changes" comment="" />
+    <list default="true" id="e6aa65de-5aaf-4d7f-bf83-298afed59137" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment-1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment-2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assignment-3.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JetPackOne~92ccb43c4c38ce488ded0021f18599d7b01af3e9" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +56,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/kamal/Programs/Android_Studio_Projects/JetPackOne",
     "run.code.analysis.last.selected.profile": "pProject Default"
