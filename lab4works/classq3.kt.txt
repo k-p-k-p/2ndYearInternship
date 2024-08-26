@@ -1,0 +1,51 @@
+interface Drawable {
+    fun drawInfo()
+}
+
+class Square(private val side: Double) : Drawable {
+    fun area(): Double {
+        return side * side
+    }
+
+    fun perimeter(): Double {
+        return 4 * side
+    }
+
+    override fun drawInfo() {
+        println("Square: ")
+        println("Side: $side")
+        println("Area: ${area()}")
+        println("Perimeter: ${perimeter()}")
+    }
+}
+
+class Triangle(private val base: Double, private val height: Double, private val side1: Double, private val side2: Double, private val side3: Double) : Drawable {
+    fun area(): Double {
+        return 0.5 * base * height
+    }
+
+    fun perimeter(): Double {
+        return side1 + side2 + side3
+    }
+
+    override fun drawInfo() {
+        println("Triangle: ")
+        println("Base: $base")
+        println("Height: $height")
+        println("Sides: $side1, $side2, $side3")
+        println("Area: ${area()}")
+        println("Perimeter: ${perimeter()}")
+    }
+}
+
+fun main() {
+    val shapes: List<Drawable> = listOf(
+        Square(4.0),
+        Triangle(3.0, 4.0, 3.0, 4.0, 5.0)
+    )
+
+    for (shape in shapes) {
+        shape.drawInfo()
+        println()
+    }
+}

@@ -1,0 +1,24 @@
+data class Person(val name: String, val age: Int)
+
+fun sortPeopleByAge(people: List<Pair<String, Int>>): List<Pair<String, Int>> 
+{
+    return people.map { (name, age) -> Person(name, age) } 
+        .sortedBy { it.age } 
+        .map { it.name to it.age } 
+}
+
+fun main() 
+{
+    val people = listOf(
+        "ram" to 25,
+        "sam" to 30,
+        "payal" to 20,
+        "suresh" to 25,
+        "ramesh" to 22
+    )
+
+    val sortedPeople = sortPeopleByAge(people)
+    sortedPeople.forEach { (name, age) ->
+        println("$name - $age")
+    }
+}

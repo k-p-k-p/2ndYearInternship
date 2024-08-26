@@ -1,0 +1,22 @@
+data class User(val name: String?, val email: String?)
+
+fun printUserDetails(user: User) 
+{
+    if (user.name == null || user.email == null) 
+{
+        println("Incomplete User")
+    } else {
+        println("User Details:")
+        println("Name: ${user.name}")
+        println("Email: ${user.email}")
+    }
+}
+
+fun main() 
+{
+    val user1 = User("suresh", "suresh@gmail.com")
+    val user2 = User(null, "ramesh@gmail.")
+    val user3 = User("rajesh", null)
+
+    printUserDetails(user1) 
+}

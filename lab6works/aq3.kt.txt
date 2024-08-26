@@ -1,0 +1,13 @@
+fun createAdder(numberToAdd: Int): (Int) -> Int 
+{
+    return { input: Int -> input + numberToAdd }
+}
+
+fun main() 
+{
+    val adder2 = createAdder(2)
+    val adder3 = createAdder(3)
+
+    println("Adding 2 to 4 gives: ${adder2(4)}")  
+    println("Adding 3 to 5 gives: ${adder3(5)}") 
+}

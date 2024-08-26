@@ -1,0 +1,16 @@
+fun printUppercase(str: String?) 
+{
+    str?.let 
+{
+        println(it.toUpperCase()) 
+    } ?: run 
+{
+        println("String is null") 
+    }
+}
+
+fun main() 
+{
+    printUppercase("hello") 
+    printUppercase(null)    
+}

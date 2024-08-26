@@ -1,0 +1,23 @@
+import kotlinx.coroutines.*
+
+suspend fun longRunningTask(): String 
+{
+    delay(3000) 
+    return "Task completed successfully"
+}
+
+fun main() = runBlocking 
+{
+    try
+ {
+        val result = withTimeout(2000L) 
+{
+            longRunningTask()
+        }
+        println(result)
+    } 
+catch (e: TimeoutCancellationException) 
+{
+        println("Task took too long, cancelled.")
+    }
+}

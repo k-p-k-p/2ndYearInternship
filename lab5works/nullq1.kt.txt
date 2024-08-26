@@ -1,0 +1,13 @@
+fun stringLength(str: String?): Int 
+{
+    return str?.length ?: -1
+}
+
+fun main() 
+{
+    val str1: String? = "Hello"
+    val str2: String? = null
+
+    println("Length of '$str1' is: ${stringLength(str1)}") 
+    println("Length of '$str2' is: ${stringLength(str2)}") 
+}

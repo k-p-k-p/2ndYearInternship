@@ -1,0 +1,25 @@
+import kotlinx.coroutines.*
+
+fun main() 
+{
+
+    val job = GlobalScope.launch 
+{
+        try 
+{
+            println("Starting coroutine")
+            delay(1000)
+            throw RuntimeException("Simulated exception")
+            println("After exception")
+        } 
+catch (e: Exception)
+ {
+            println("Caught exception: ${e.message}")
+        }
+    }
+    
+    runBlocking {
+        job.join()
+        println("Coroutine completed")
+    }
+}

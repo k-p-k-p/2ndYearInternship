@@ -1,0 +1,16 @@
+fun stringLengths(strings: List<String>): Map<String, Int> 
+{
+    val lengthsMap = mutableMapOf<String, Int>()
+    for (str in strings) 
+{
+        lengthsMap[str] = str.length
+    }
+    return lengthsMap
+}
+
+fun main() 
+{
+    val strings = listOf("apple", "banana", "cherry", "date")
+    val lengths = stringLengths(strings)
+    println(lengths) 
+}

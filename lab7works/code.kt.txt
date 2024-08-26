@@ -1,0 +1,60 @@
+package com.example.labworks
+
+import android.app.Dialog
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
+import com.example.labworks.ui.theme.LabWorksTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //enableEdgeToEdge()
+        setContent {
+            LabWorksTheme {
+                Text("Hello World", color = Color.Red , fontSize = 30.sp , fontStyle = FontStyle.Italic , fontWeight = FontWeight.Bold)
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        println("LifeCycle : on create started")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        println("LifeCycle : on resume started")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        println("LifeCycle : on pause occured")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        println("LifeCycle : on stop occured")
+    }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    LabWorksTheme {
+        //Greeting("Android")
+    }
+}

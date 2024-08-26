@@ -1,0 +1,16 @@
+fun transformStrings(strings: List<String>, transformer: (String) -> String): List<String> 
+{
+    return strings.map { transformer(it) }
+}
+
+fun main() {
+    val names = listOf("Alice", "Bob", "Charlie", "David")
+
+    val toUpperCase: (String) -> String = { it.toUpperCase() }
+    val uppercasedNames = transformStrings(names, toUpperCase)
+    println("Uppercased names: $uppercasedNames")
+
+    val addPrefix: (String) -> String = { "Name: $it" }
+    val prefixedNames = transformStrings(names, addPrefix)
+    println("Prefixed names: $prefixedNames")
+}

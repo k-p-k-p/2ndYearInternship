@@ -1,0 +1,17 @@
+fun isPalindrome(s: String): Boolean 
+{
+    val len = s.length
+    for (i in 0 until len / 2) 
+    {
+        if (s[i] != s[len - i - 1]) 
+        {
+            return false
+        }
+    }
+    return true
+}
+
+fun main() {
+    println(isPalindrome("madam")) 
+    println(isPalindrome("sadyant")) 
+}

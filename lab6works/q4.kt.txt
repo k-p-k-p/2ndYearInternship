@@ -1,0 +1,30 @@
+// Custom exception class
+class InvalidAgeException(message: String) : Exception(message)
+
+fun checkAge(age: Int) 
+{
+    if (age < 18)
+ {
+        throw InvalidAgeException("Age must be 18 or older.")
+    } 
+else 
+{
+        println("Age $age is valid.")
+    }
+}
+
+fun main() 
+{
+    val age1 = 25
+    val age2 = 15
+    
+    try 
+{
+        checkAge(age1) 
+        checkAge(age2) 
+    } 
+catch (e: InvalidAgeException) 
+{
+        println("Invalid Age Exception: ${e.message}")
+    }
+}

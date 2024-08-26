@@ -1,0 +1,85 @@
+package com.example.labworks
+
+import android.app.Dialog
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.labworks.ui.theme.LabWorksTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //enableEdgeToEdge()
+        setContent {
+            LabWorksTheme {
+                Column(
+                    modifier = Modifier
+                        .background(Color.Cyan)
+                        .fillMaxWidth(),
+
+                ) {
+                    Text("android lab 8", fontSize = 30.sp , modifier = Modifier
+                        .background(Color.Blue)
+                        .fillMaxWidth())
+                            Text("todays content taught", fontSize = 20.sp)
+                            Column( modifier = Modifier
+                                .background(Color.Gray)
+                                .fillMaxSize())
+                            {
+                                Text("-> Modifiers" , fontSize = 15.sp)
+                                Text("-> allignments" , fontSize = 15.sp)
+                                Text("-> arrangements" , fontSize = 15.sp)
+                            }
+                        }
+            }
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        println("LifeCycle : on create started")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        println("LifeCycle : on resume started")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        println("LifeCycle : on pause occured")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        println("LifeCycle : on stop occured")
+    }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun GreetingPreview() {
+    LabWorksTheme {
+        //Greeting("Android")
+    }
+}
